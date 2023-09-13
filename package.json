@@ -9,12 +9,34 @@
     "dist"
   ],
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "build": "yakumo esbuild && yakumo tsc && koishi-console build",
+    "pub": "yakumo publish --registry https://registry.npmjs.org"
+  },
+  "author": {
+    "name": "SaarChaffee",
+    "email": "saarchaffee@qq.com",
+    "url": "https://github.com/SaarChaffee"
+  },
+  "homepage": "https://github.com/SaarChaffee/koishi-plugin-all-in-one",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SaarChaffee/koishi-plugin-all-in-one.git"
+  },
+  "bugs": {
+    "url": "https://github.com/SaarChaffee/koishi-plugin-all-in-one/issues"
+  },
   "keywords": [
     "chatbot",
     "koishi",
-    "plugin"
+    "plugin",
+    "tool"
   ],
+  "koishi": {
+    "description": {
+      "zh": "合并网络上的文本资源并返回合并后文本"
+    }
+  },
   "peerDependencies": {
     "koishi": "4.14.5"
   }
