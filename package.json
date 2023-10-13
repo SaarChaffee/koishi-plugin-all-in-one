@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-all-in-one",
   "description": "合并网络上的文本资源并返回合并后文本",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -38,6 +38,6 @@
     }
   },
   "peerDependencies": {
-    "koishi": "4.14.5"
+    "koishi": "^4.14.5"
   }
 }
