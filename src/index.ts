@@ -9,6 +9,10 @@ declare module 'koishi' {
   }
 }
 
+export const inject = {
+  required: ['router']
+}
+
 export interface Config {
   urls: string[]
 }

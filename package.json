@@ -35,6 +35,11 @@
   "koishi": {
     "description": {
       "zh": "合并网络上的文本资源并返回合并后文本"
+    },
+    "service": {
+      "required": [
+        "router"
+      ]
     }
   },
   "peerDependencies": {
