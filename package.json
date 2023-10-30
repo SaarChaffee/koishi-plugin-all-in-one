@@ -1,17 +1,15 @@
 {
   "name": "koishi-plugin-all-in-one",
   "description": "合并网络上的文本资源并返回合并后文本",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
-    "lib",
-    "dist"
+    "lib"
   ],
   "license": "MIT",
   "scripts": {
-    "build": "yakumo esbuild && yakumo tsc && koishi-console build",
-    "pub": "yakumo publish --registry https://registry.npmjs.org"
+    "build": "yakumo esbuild && yakumo tsc && koishi-console build"
   },
   "author": {
     "name": "SaarChaffee",
@@ -43,6 +41,6 @@
     }
   },
   "peerDependencies": {
-    "koishi": "^4.14.5"
+    "koishi": "^4.15.3"
   }
 }
