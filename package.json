@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-all-in-one",
-  "description": "合并网络上的文本资源并返回合并后文本",
-  "version": "0.0.3",
+  "description": "合并网络上的 Trackerlist 并返回合并后的 Trackerlist",
+  "version": "0.0.4",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [

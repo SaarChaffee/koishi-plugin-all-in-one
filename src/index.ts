@@ -45,17 +45,19 @@ class AllInOne extends Service {
 
 export function apply(ctx: Context, config: Config) {
   ctx.plugin(AllInOne, config)
-
-  ctx.router.get('/trackerlist', async (cc, next) => {
-    const resp = await ctx.allInOne.get()
-    if (resp.length > 0) {
-      cc.status = 200
-      cc.type = 'text'
-      return cc.body = resp
-    } else {
-      cc.status = 500
-      cc.type = 'text'
-      return cc.body = 'error'
-    }
+  ctx.inject(['allInOne'], (ctx) => {
+    ctx.router.get('/trackerlist', async (cc, next) => {
+      const resp = await ctx.allInOne.get()
+      if (resp.length > 0) {
+        cc.status = 200
+        cc.type = 'text'
+        return cc.body = resp
+      } else {
+        cc.status = 500
+        cc.type = 'text'
+        return cc.body = 'error'
+      }
+    })
   })
+
 }
