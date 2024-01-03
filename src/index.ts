@@ -1,5 +1,6 @@
 import { Context, Logger, Schema, Service } from 'koishi'
 import { } from '@koishijs/assets'
+import { } from '@koishijs/plugin-server'
 
 const logger = new Logger('all-in-one')
 
@@ -10,7 +11,7 @@ declare module 'koishi' {
 }
 
 export const inject = {
-  required: ['router']
+  required: ['server']
 }
 
 export interface Config {
@@ -46,7 +47,7 @@ class AllInOne extends Service {
 export function apply(ctx: Context, config: Config) {
   ctx.plugin(AllInOne, config)
   ctx.inject(['allInOne'], (ctx) => {
-    ctx.router.get('/trackerlist', async (cc, next) => {
+    ctx.server.get('/trackerlist', async (cc, next) => {
       const resp = await ctx.allInOne.get()
       if (resp.length > 0) {
         cc.status = 200
@@ -59,5 +60,4 @@ export function apply(ctx: Context, config: Config) {
       }
     })
   })
-
 }
