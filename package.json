@@ -1,6 +1,6 @@
 {
   "name": "koishi-plugin-all-in-one",
-  "description": "合并网络上的 Trackerlist 并返回合并后的 Trackerlist",
+  "description": "合并网络上的文本并返回合并返回后的文本。",
   "version": "0.0.6",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
@@ -28,7 +28,10 @@
     "chatbot",
     "koishi",
     "plugin",
-    "tool"
+    "tool",
+    "trackerlist",
+    "rss",
+    "mikan"
   ],
   "koishi": {
     "description": {

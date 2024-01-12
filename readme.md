@@ -2,4 +2,4 @@
 
 [![npm](https://img.shields.io/npm/v/koishi-plugin-all-in-one?style=flat-square)](https://www.npmjs.com/package/koishi-plugin-all-in-one)
 
-合并网络上的 Trackerlist 并返回合并后的 Trackerlist
+合并网络上的文本并返回合并返回后的文本。
