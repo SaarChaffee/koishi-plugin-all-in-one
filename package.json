@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-all-in-one",
   "description": "合并网络上的文本并返回合并返回后的文本。",
-  "version": "0.0.6",
+  "version": "0.0.7",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
