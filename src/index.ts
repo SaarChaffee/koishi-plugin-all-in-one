@@ -25,7 +25,7 @@ export const Config: Schema<Config> = Schema.object({
 })
 
 class AllInOne extends Service {
-  private config: Config
+  declare config: Config
 
   constructor(ctx: Context, config: Config) {
     super(ctx, 'allInOne', true)
