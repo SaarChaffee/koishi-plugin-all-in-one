@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-all-in-one",
   "description": "合并网络上的 trackerlist 并返回合并返回后的 trackerlist。反代 Mikan RSS 订阅，并将 torrent 文件链接转换为 magnet 链接。",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
