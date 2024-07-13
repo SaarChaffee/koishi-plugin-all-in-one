@@ -1,7 +1,7 @@
 {
   "name": "koishi-plugin-all-in-one",
-  "description": "合并网络上的文本并返回合并返回后的文本。",
-  "version": "0.0.7",
+  "description": "合并网络上的 trackerlist 并返回合并返回后的 trackerlist。反代 Mikan RSS 订阅，并将 torrent 文件链接转换为 magnet 链接。",
+  "version": "1.0.0",
   "main": "lib/index.js",
   "typings": "lib/index.d.ts",
   "files": [
@@ -9,7 +9,7 @@
   ],
   "license": "MIT",
   "scripts": {
-    "build": "yakumo esbuild && yakumo tsc && koishi-console build"
+    "build": "yakumo build"
   },
   "author": {
     "name": "SaarChaffee",
@@ -35,7 +35,7 @@
   ],
   "koishi": {
     "description": {
-      "zh": "合并网络上的文本资源并返回合并后文本"
+      "zh": "合并网络上的 trackerlist 并返回合并返回后的 trackerlist。反代 Mikan RSS 订阅，并将 torrent 文件链接转换为 magnet 链接。"
     },
     "service": {
       "required": [
@@ -44,6 +44,12 @@
     }
   },
   "peerDependencies": {
-    "koishi": "^4.15.3"
+    "koishi": "^4.17.9"
+  },
+  "dependencies": {
+    "xml2js": "^0.6.2"
+  },
+  "devDependencies": {
+    "@types/xml2js": "^0"
   }
 }

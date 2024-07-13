@@ -1,5 +1,7 @@
 {
   "compilerOptions": {
+    "rootDir": "src",
+    "outDir": "lib",
     "target": "es2022",
     "module": "ESNext",
     "declaration": true,
@@ -10,7 +12,8 @@
     "emitDeclarationOnly": true,
     "moduleResolution": "Bundler",
     "jsx": "react-jsx",
-    "jsxImportSource": "@satorijs/element"
+    "jsxImportSource": "@satorijs/element",
+    "types": ["node", "yml-register/types"]
   },
   "include": ["src"]
 }
