@@ -66,6 +66,12 @@ export async function apply(ctx: Context, config: Config) {
           cc.body = err
           return next()
         }
+        if (!xml.rss.channel[0]?.item) {
+          cc.status = 200
+          cc.type = 'application/xml; charset=utf-8'
+          cc.body = resp
+          return next()
+        }
         xml.rss.channel[0].item.forEach((i) => {
           const url = i.enclosure[0].$.url
           const match = url.match(/\/(?<hash>[^\/]+)\.torrent$/)
@@ -76,10 +82,10 @@ export async function apply(ctx: Context, config: Config) {
         })
 
         const builder = new Builder()
-        const resp = builder.buildObject(xml)
+        const body = builder.buildObject(xml)
         cc.status = 200
         cc.type = 'application/xml; charset=utf-8'
-        cc.body = resp
+        cc.body = body
         return next()
       })
     } else {
